@@ -116,6 +116,13 @@ def select_graph(provincia,inicio,fin, cum,par):
             update_graph_H(metricas_H,['P_uci','P_c','P_ven','P_act'], inicio,fin, cum,facet=True, titulo = "Porcentaje de hospitalizacion"),
             update_graph_H(metricas_H,['p_c','p_uci','p_ven'], inicio,fin, cum,10, func = px.area, titulo = "Composicion de la hospotalizacion")
         ]
+    elif par == 4:
+        graph = [
+            update_graph(sir,['S','I','R','F'],provincia, inicio,fin, cum,facet=True,func=px.line, titulo = "SIR"),
+            update_graph(sir,['r','a','b'],provincia, inicio,fin, cum,facet=True,titulo = "Parametros"),
+            update_graph(sir,['R0','Re','Pico'],provincia, inicio,fin, cum,facet=True, titulo = "Tasa de recuperacion y fallecimiento"),
+            update_graph(sir,['Dias_R','Dias_F'],provincia, inicio,fin, cum,10, func = px.area, titulo = "Duracion promedio")
+        ]
 
     return graph
 

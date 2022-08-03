@@ -9,9 +9,9 @@ header = html.Header(id="header",children=[
 nav = dbc.CardHeader( id = 'nav', children=[
                     dbc.Tabs(id="tabes", active_tab='metricas', children=[
                         dbc.Tab(label='Metricas', tab_id='metricas'),
-                        #dbc.Tab(label='Modelo SIR', tab_id='SIR'),
-                        #dbc.Tab(label='Mapa', tab_id='mapa'),
-                        #dbc.Tab(label='Analisis', tab_id='doc')
+                        dbc.Tab(label='Modelo SIR', tab_id='SIR'),
+                        dbc.Tab(label='Mapa', tab_id='mapa'),
+                        dbc.Tab(label='Analisis', tab_id='doc')
                         
                     ])
             ])

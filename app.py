@@ -63,4 +63,4 @@ def update_rango(min,max):
     return [cb.fecha_selector(min,max)]
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=  True)
